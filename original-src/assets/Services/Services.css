@@ -1,0 +1,107 @@
+:root {
+  --bg: #a5c4d1;
+  --text: #294a58;
+  --text1: #73a6bb;
+  --text2: #fff;
+  --muted: #a5c4d1;
+  --accent: #233e49;
+  --btn-bg: #294a58;
+}
+
+.dark-theme {
+  --bg: #294a58;
+  --text: #a0ccbe;
+  --text1: #73a896;
+  --text2: #fff;
+  --muted: #294a58;
+  --accent: #90bbad;
+  --btn-bg: #a0ccbe;
+}
+.services-page {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services-title,
+.featured-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.services-subtitle,
+.featured-subtitle {
+  color: var(--text2);
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.services-grid,
+.featured-grid {
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+}
+
+.services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin-bottom: 70px;
+}
+
+.service-card {
+  background: var(--text2);
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.service-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.featured-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.featured-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  background: var(--bg);
+}
+
+.featured-card:hover {
+  transform: translateY(-8px);
+}
+
+.featured-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.featured-text {
+  padding: 15px;
+  font-weight: 500;
+  color: var(--btn-bg);
+}
+
+
+.dark-theme .service-card,
+.dark-theme .featured-card {
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+

@@ -1,0 +1,267 @@
+:root {
+  --bg: #a5c4d1;
+  --text: #294a58;
+  --text1: #73a6bb;
+  --text2: #fff;
+  --muted: #a5c4d1;
+  --accent: #233e49;
+  --btn-bg: #294a58;
+}
+
+.dark-theme {
+  --bg: #294a58;
+  --text: #a0ccbe;
+  --text1: #73a896;
+  --text2: #fff;
+  --muted: #294a58;
+  --accent: #90bbad;
+  --btn-bg: #a0ccbe;
+}
+.booking-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.booking-page.light {
+  background: #f9f9f9;
+  color: #111;
+}
+
+.booking-page.dark {
+  background: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.booking-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.booking-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: inherit;
+  color: inherit;
+}
+
+.booking-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.booking-form .btn-submit {
+  grid-column: 1 / -1;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: var(--btn-bg);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  justify-self: center;
+}
+
+.booking-form .btn-submit:hover {
+  background-color: var(--accent);
+}
+
+.modal-success {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-success .modal-content {
+  background: #fff;
+  color: #111;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+}
+
+.modal-success.dark .modal-content {
+  background: #2a2a2a;
+  color: #f0f0f0;
+}
+
+.modal-success span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.modal-success p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.modal-success button {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.modal-success button:hover {
+  background-color: #1e7e34;
+}
+
+.booking-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.booking-form .form-group.fullwidth {
+  grid-column: 1 / -1;
+}
+
+.booking-form label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text, #111);
+}
+
+.booking-form label .req {
+  color: #d33;
+  margin-left: 6px;
+  font-weight: 800;
+}
+
+.booking-form .field-help {
+  font-size: 0.85rem;
+  color: var(--muted, #556);
+  min-height: 18px;
+  line-height: 1.1;
+}
+
+.booking-page.dark-theme .field-help {
+  color: #9aa4b2;
+}
+
+.search-form {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.search-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+.search-btn {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  bottom: 6px;
+  padding: 0 12px;
+  border-radius: 6px;
+  background: var(--btn-bg);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.search-suggestions {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 44px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 30;
+  padding: 6px;
+}
+.suggestion-item {
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.suggestion-thumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.suggestion-meta {
+  text-align: left;
+}
+.suggestion-name {
+  font-weight: 700;
+}
+.suggestion-specialty {
+  font-size: 13px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .booking-form {
+    grid-template-columns: 1fr;
+  }
+  .booking-form .form-group.fullwidth {
+    grid-column: 1;
+  }
+  .search-suggestions {
+    left: 8px;
+    right: 8px;
+    top: calc(100% + 6px);
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-form {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-title {
+    font-size: 1.7rem;
+  }
+}
